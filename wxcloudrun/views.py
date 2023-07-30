@@ -64,3 +64,11 @@ def get_count():
     """
     counter = Counters.query.filter(Counters.id == 1).first()
     return make_succ_response(0) if counter is None else make_succ_response(counter.count)
+
+
+@app.route('/api/lwb', methods=['GET'])
+def get_lwb_count():
+    """
+    :return: 计数的值
+    """
+    return make_succ_response(1024)
